@@ -1,0 +1,2 @@
+(this.webpackJsonpportfolio=this.webpackJsonpportfolio||[]).push([[0],{9:function(o,t,e){"use strict";e.r(t);e(0);var r=e(3),n=e.n(r),c=e(1),i=function(){return Object(c.jsx)("div",{children:"App"})};n.a.render(Object(c.jsx)(i,{}),document.querySelector("#root"))}},[[9,1,2]]]);
+//# sourceMappingURL=main.d9304765.chunk.js.map
