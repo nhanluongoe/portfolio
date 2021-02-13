@@ -20,7 +20,7 @@ const Education = () => {
               <div>
                 <h1>{name}</h1>
                 <h2 className='text-sm'>
-                  {degree}, {major} - {gpa}
+                  {degree}, <span className='italic'>{major}</span> - {gpa}
                 </h2>
               </div>
             </div>
@@ -43,7 +43,7 @@ const Education = () => {
               <div>
                 <h1>{name}</h1>
                 <h2 className='text-sm'>
-                  {degree}, {major}
+                  {degree}, <span className='italic'>{major}</span>
                 </h2>
               </div>
             </div>
@@ -98,7 +98,7 @@ const Skills = () => {
       </p>
       <p className='py-2'>
         Frameworks & Libraries: <Skill language='NodeJS' />,{' '}
-        <Skill language='ReactJS/Redux' />
+        <Skill language='ReactJS/Redux' />, <Skill language='Express' />
       </p>
       <p className='py-2'>
         Database: <Skill language='MySQl' />, <Skill language='MongoDB' />
@@ -113,7 +113,7 @@ const Skills = () => {
 
 const About = () => {
   return (
-    <div className='container flex flex-col justify-center h-full px-5'>
+    <div className='container flex flex-col justify-center h-full px-5 text-sm md:text-xl pl-24 sm:pl-32 md:pl-72'>
       <div className='h-1/2 flex justify-start'>
         <Education />
       </div>

@@ -12,23 +12,26 @@ const Welcome = () => {
 const Avatar = () => {
   return (
     <div className='px-3 md:w-1/3'>
-      <div>
-        <img src={avatar} alt='avatar' />
-      </div>
+      <img src={avatar} alt='avatar' />
     </div>
   );
 };
 
 const Bio = () => {
   return (
-    <div className='px-3 md:w-2/3 text-lg md:text-xl'>
-      <h1 className='text-2xl md:text-4xl py-10'>Luong Thanh Nhan</h1>
-      <p className='py-2'>
+    <div className='px-3 md:w-1/2 text-lg md:text-xl'>
+      <h1 className='text-2xl md:text-4xl text-center md:text-left py-2'>
+        Luong Thanh Nhan
+      </h1>
+      <h2 className='text-base md:text-3xl text-center md:text-left pb-5 text-gray-500'>
+        Third year student - HCMUT
+      </h2>
+      <p className='py-2 text-sm sm:text-base text-justify'>
         I am currently pursuing a degree in Computer Science at Ho Chi Minh City
         University of Technology where I previously got a Bachelor of
         Engineering in the major of Electrical and Electronic Engineering
       </p>
-      <p className='py-2'>
+      <p className='py-2 text-sm sm:text-base text-justify'>
         I am both interested in frontend and backend development, so I am
         learning to be a fullstack developer in the near future.
       </p>
@@ -38,9 +41,17 @@ const Bio = () => {
 
 const Quote = ({ content, author }) => {
   return (
-    <div className='container flex flex-col justify-center px-4 text-gray-500 h-full'>
-      <p className='text-xl italic'>{content}</p>
-      <p className='text-3xl'> _ {author}</p>
+    <div className='container mx-auto py-5 w-full md:w-3/4 px-4 text-gray-500'>
+      <p className='text-xs md:text-xl italic text-justify'>{content}</p>
+      <p className='text-xs md:text-3xl'>
+        {' '}
+        <span>
+          <i class='fas fa-feather-alt'></i>
+        </span>
+        {'_'}
+        {author}
+        {'_'}
+      </p>
     </div>
   );
 };
@@ -53,13 +64,13 @@ const Home = () => {
   };
 
   return (
-    <div className='flex flex-col h-full'>
+    <div className='flex flex-col h-full ml-10 pl-10 md:ml-28 md:pl-28'>
       <Welcome />
-      <div className='container md:flex justify-between items-center'>
+      <div className='container md:flex justify-around items-center'>
         <Avatar />
         <Bio />
       </div>
-      <hr className='w-3/4 mx-auto my-8' />
+      <hr className='w-3/4 mx-auto my-4 md:my-8' />
       <Quote content={quote.content} author={quote.author} />
     </div>
   );
