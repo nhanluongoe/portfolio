@@ -6,47 +6,55 @@ const Education = () => {
   const School = ({ name, logo = null, degree, major, time, gpa = null }) => {
     if (gpa)
       return (
-        <div className='flex py-2 pt-4'>
-          <div className='relative w-1/5'>
+        <div className='flex py-2 pt-4 items-center'>
+          <div className='w-1/6'>
             <h1>{time}</h1>
-            <img
-              className='absolute top-0 left-40 h-full hidden lg:block'
-              src={logo}
-              alt='logo'
-            />
           </div>
-          <div className='w-4/5'>
-            <h1>{name}</h1>
-            <h2>
-              {degree}, {major} - {gpa}
-            </h2>
+          <div className='w-5/6'>
+            <div className='flex w-full'>
+              <img
+                className='h-10 hidden lg:block pr-4'
+                src={logo}
+                alt='logo'
+              />
+              <div>
+                <h1>{name}</h1>
+                <h2 className='text-sm'>
+                  {degree}, {major} - {gpa}
+                </h2>
+              </div>
+            </div>
           </div>
         </div>
       );
     else
       return (
-        <div className='flex py-2 pt-4'>
-          <div className='relative w-1/5'>
+        <div className='flex py-2 pt-4 items-center'>
+          <div className='w-1/6'>
             <h1>{time}</h1>
-            <img
-              className='absolute top-0 left-40 h-full hidden lg:block'
-              src={logo}
-              alt='logo'
-            />
           </div>
-          <div className='w-4/5'>
-            <h1>{name}</h1>
-            <h2>
-              {degree}, {major}
-            </h2>
+          <div className='w-5/6'>
+            <div className='flex w-full'>
+              <img
+                className='h-10 hidden lg:block pr-4'
+                src={logo}
+                alt='logo'
+              />
+              <div>
+                <h1>{name}</h1>
+                <h2 className='text-sm'>
+                  {degree}, {major}
+                </h2>
+              </div>
+            </div>
           </div>
         </div>
       );
   };
 
   return (
-    <div>
-      <p className='py-3 text-md md:text-2xl'>Education</p>
+    <div className='w-full'>
+      <p className='py-3 text-md md:text-3xl font-bold'>Education</p>
       <School
         name='Ho Chi Minh city University of Technology'
         logo={hcmutLogo}
@@ -75,25 +83,42 @@ const Education = () => {
 };
 
 const Skills = () => {
+  const Skill = ({ language }) => {
+    return (
+      <span className='p-1 rounded border-2 border-gray-400'>{language}</span>
+    );
+  };
+
   return (
     <div>
-      <p className='py-3 text-md md:text-2xl'>Skills</p>
-      <h1>Programming Languages: Javascript, Python, HTML/CSS</h1>
-      <h1>Frameworks & Libraries: NodeJS, ReactJS/Redux</h1>
-      <h1>Database: MySQl, MongoDB</h1>
-      <h1>Tools and Methods: Git, Docker, Scrum/Agile</h1>
+      <p className='py-5 text-md md:text-3xl font-bold'>Skills</p>
+      <p className='py-2'>
+        Programming Languages: <Skill language='Javascript' />,{' '}
+        <Skill language='Python' />, <Skill language='HTML/CSS' />
+      </p>
+      <p className='py-2'>
+        Frameworks & Libraries: <Skill language='NodeJS' />,{' '}
+        <Skill language='ReactJS/Redux' />
+      </p>
+      <p className='py-2'>
+        Database: <Skill language='MySQl' />, <Skill language='MongoDB' />
+      </p>
+      <p className='py-2'>
+        Tools and Methods: <Skill language='Git' />, <Skill language='Docker' />
+        , <Skill language='Scrum/Agile' />
+      </p>
     </div>
   );
 };
 
 const About = () => {
   return (
-    <div className='container flex flex-col h-full justify-start px-5'>
-      <div className='h-1/2'>
+    <div className='container flex flex-col justify-center h-full px-5'>
+      <div className='h-1/2 flex justify-start'>
         <Education />
       </div>
       <hr className='w-1/2 mx-auto' />
-      <div className='h-1/3'>
+      <div className='h-1/2 flex justify-start'>
         <Skills />
       </div>
     </div>

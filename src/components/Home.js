@@ -22,13 +22,11 @@ const Avatar = () => {
 const Bio = () => {
   return (
     <div className='px-3 md:w-2/3 text-lg md:text-xl'>
-      <h1 className='text-center text-2xl md:text-4xl py-10'>
-        Luong Thanh Nhan
-      </h1>
+      <h1 className='text-2xl md:text-4xl py-10'>Luong Thanh Nhan</h1>
       <p className='py-2'>
         I am currently pursuing a degree in Computer Science at Ho Chi Minh City
-        University of Technology where I also got a Bachelor of Engineering in
-        the major of Electrical and Electronic Engineering
+        University of Technology where I previously got a Bachelor of
+        Engineering in the major of Electrical and Electronic Engineering
       </p>
       <p className='py-2'>
         I am both interested in frontend and backend development, so I am
