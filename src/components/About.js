@@ -8,9 +8,9 @@ const Education = () => {
       return (
         <div className='flex py-2 pt-4 items-center'>
           <div className='w-1/6'>
-            <h1>{time}</h1>
+            <h2 className='text-xs md:text-base'>{time}</h2>
           </div>
-          <div className='w-5/6'>
+          <div className='pl-4 md:pl-0 w-5/6'>
             <div className='flex w-full'>
               <img
                 className='h-10 hidden lg:block pr-4'
@@ -18,8 +18,8 @@ const Education = () => {
                 alt='logo'
               />
               <div>
-                <h1>{name}</h1>
-                <h2 className='text-sm'>
+                <h1 classname='text-xs'>{name}</h1>
+                <h2 className='text-xs md:text-base'>
                   {degree}, <span className='italic'>{major}</span> - {gpa}
                 </h2>
               </div>
@@ -31,9 +31,9 @@ const Education = () => {
       return (
         <div className='flex py-2 pt-4 items-center'>
           <div className='w-1/6'>
-            <h1>{time}</h1>
+            <h2 className='text-xs md:text-base'>{time}</h2>
           </div>
-          <div className='w-5/6'>
+          <div className='pl-4 md:pl-0 w-5/6'>
             <div className='flex w-full'>
               <img
                 className='h-10 hidden lg:block pr-4'
@@ -41,8 +41,8 @@ const Education = () => {
                 alt='logo'
               />
               <div>
-                <h1>{name}</h1>
-                <h2 className='text-sm'>
+                <h1 classname='text-xs'>{name}</h1>
+                <h2 className='text-xs md:text-base'>
                   {degree}, <span className='italic'>{major}</span>
                 </h2>
               </div>
@@ -54,7 +54,7 @@ const Education = () => {
 
   return (
     <div className='w-full'>
-      <p className='py-3 text-md md:text-3xl font-bold'>Education</p>
+      <p className='py-3 text-lg md:text-3xl font-bold'>Education</p>
       <School
         name='Ho Chi Minh city University of Technology'
         logo={hcmutLogo}
@@ -85,26 +85,29 @@ const Education = () => {
 const Skills = () => {
   const Skill = ({ language }) => {
     return (
-      <span className='p-1 rounded border-2 border-gray-400'>{language}</span>
+      <span className='p-0.5 md:p-1 text-xs md:text-base rounded border-2 border-gray-400'>
+        {language}
+      </span>
     );
   };
 
   return (
-    <div>
-      <p className='py-5 text-md md:text-3xl font-bold'>Skills</p>
-      <p className='py-2'>
+    <div className='w-full'>
+      <p className='py-5 text-lg md:text-3xl font-bold'>Skills</p>
+      <p className='py-1 text-small md:text-md md:py-2'>
         Programming Languages: <Skill language='Javascript' />,{' '}
-        <Skill language='Python' />, <Skill language='HTML/CSS' />
+        <Skill language='Python' />, <Skill language='HTML/CSS' />,{' '}
+        <Skill language='C/C++' />
       </p>
-      <p className='py-2'>
+      <p className='py-1 text-small md:text-md md:py-2'>
         Frameworks & Libraries: <Skill language='NodeJS' />,{' '}
         <Skill language='ReactJS/Redux' />, <Skill language='Express' />
       </p>
-      <p className='py-2'>
-        Database: <Skill language='MySQl' />, <Skill language='MongoDB' />
+      <p className='py-1 text-small md:text-md md:py-2'>
+        Database: <Skill language='MySQL' />, <Skill language='MongoDB' />
       </p>
-      <p className='py-2'>
-        Tools and Methods: <Skill language='Git' />, <Skill language='Docker' />
+      <p className='py-1 text-small md:text-md md:py-2'>
+        Tools & Methods: <Skill language='Git' />, <Skill language='Docker' />
         , <Skill language='Scrum/Agile' />
       </p>
     </div>
@@ -113,12 +116,14 @@ const Skills = () => {
 
 const About = () => {
   return (
-    <div className='container flex flex-col justify-center h-full px-5 text-sm md:text-xl pl-24 sm:pl-32 md:pl-72'>
-      <div className='h-1/2 flex justify-start'>
+    <div className='flex flex-col justify-center items-center h-full w-full px-5 text-sm md:text-xl'>
+      <div className='h-full w-full flex'>
         <Education />
       </div>
-      <hr className='w-1/2 mx-auto' />
-      <div className='h-1/2 flex justify-start'>
+      <div>
+        <hr className='w-1/2 mx-auto' />
+      </div>
+      <div className='h-full w-full flex'>
         <Skills />
       </div>
     </div>

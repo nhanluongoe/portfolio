@@ -11,11 +11,11 @@ const App = () => {
   return (
     <div className='font-mono'>
       <Router history={history}>
-        <div className='relative flex justify-between'>
-          <div className='p-4 h-screen w-1/6 bg-gray-700 fixed'>
+        <div className='flex h-screen justify-between'>
+          <div className='p-4 w-1/6 bg-gray-700'>
             <Header />
           </div>
-          <div className='py-4 pb-10 h-screen w-screen'>
+          <div className='py-4 pb-10 w-5/6 px-4'>
             <Route path='/portfolio' exact component={Home} />
             <Route path='/about' exact component={About} />
             <Route path='/projects' exact component={Projects} />
