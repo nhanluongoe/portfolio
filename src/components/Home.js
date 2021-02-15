@@ -11,12 +11,26 @@ const Welcome = () => {
 
 const Avatar = () => {
   return (
-    <div className='px-3 md:w-1/4 flex justify-center md:content'>
+    <div className='px-3 md:w-1/4 flex flex-col justify-center items-center md:content'>
       <img
         className='h-1/2 w-1/2 md:h-full md:w-full '
         src={avatar}
         alt='avatar'
       />
+      <div className='text-gray-500 pt-1 md:pt-3'>
+        <h3 className='relative p-0.5 md:p-1'>
+          <span className='absolute -left-6'>
+            <i class='fas fa-envelope'></i>
+          </span>
+          nhanlt18@gmail.com
+        </h3>
+        <h3 className='relative p-0.5 md:p-1'>
+          <span className='absolute -left-6'>
+            <i class='fas fa-mobile'></i>
+          </span>
+          (+84)342-575-569
+        </h3>
+      </div>
     </div>
   );
 };
