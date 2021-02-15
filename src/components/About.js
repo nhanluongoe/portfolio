@@ -85,7 +85,7 @@ const Education = () => {
 const Skills = () => {
   const Skill = ({ language }) => {
     return (
-      <span className='p-0.5 md:p-1 text-xs md:text-base rounded border-2 border-gray-400'>
+      <span className='p-0 md:p-1 text-xs md:text-base rounded border-2 border-gray-400'>
         {language}
       </span>
     );
