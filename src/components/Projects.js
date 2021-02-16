@@ -2,7 +2,7 @@ import React from 'react';
 
 const Item = ({ name, time, desc, teamsize, res, stack, src }) => {
   return (
-    <div className='rounded-2xl p-2'>
+    <div className='rounded-2xl mb-2 p-2 border-b-4 border-r-4 border-l-4'>
       <h1 className='font-bold text-sm md:text-base p-1 bg-gray-700 text-gray-100 text-center rounded-2xl mb-2'>
         {name}, {time}
       </h1>
