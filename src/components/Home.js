@@ -17,7 +17,7 @@ const Avatar = () => {
         src={avatar}
         alt='avatar'
       />
-      <div className='text-gray-500 pt-1 md:pt-3'>
+      <div className='text-xs md:text-base text-gray-500 pt-1 md:pt-3'>
         <h3 className='relative p-0.5 md:p-1'>
           <span className='absolute -left-6'>
             <i class='fas fa-envelope'></i>
@@ -42,7 +42,7 @@ const Bio = () => {
         Luong Thanh Nhan
       </h1>
       <h2 className='text-base md:text-3xl text-center md:text-left pb-5 text-gray-500'>
-        Third year student - HCMUT
+        Third-Year Student - HCMUT
       </h2>
       <p className='py-2 text-base sm:text-base text-justify'>
         I am currently pursuing a degree in Computer Science at Ho Chi Minh City

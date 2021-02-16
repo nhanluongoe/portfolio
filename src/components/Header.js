@@ -33,7 +33,6 @@ const Header = () => {
         </ul>
       </div>
       <div className='text-gray-200 '>
-        <h1 className='pb-5 text-sm hidden md:block md:text-xl'>Find me:</h1>
         <p className='text-xl md:text-3xl text-center py-2 hover:text-white transfrom hover:scale-110 transition duration-300 ease-in-out'>
           <a
             href='https://github.com/nhanluongoe'

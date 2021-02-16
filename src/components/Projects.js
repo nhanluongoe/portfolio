@@ -2,7 +2,7 @@ import React from 'react';
 
 const Item = ({ name, time, desc, teamsize, res, stack, src }) => {
   return (
-    <div className='border-4 border-dotted rounded-2xl ring-4 ring-gray-300 ring-opacity-50 ring-offset-2 p-1'>
+    <div className='rounded-2xl ring-4 ring-gray-300 ring-opacity-50 p-1'>
       <h1 className='font-bold text-sm md:text-base p-1'>
         {name}, {time}
       </h1>
@@ -15,10 +15,8 @@ const Item = ({ name, time, desc, teamsize, res, stack, src }) => {
       </p>
       <p className='text-xs md:text-sm p-0.5'>
         <i class='fas fa-terminal md:hidden'></i>
-        <span className='hidden md:inline-block font-semibold'>
-          Responsibilities
-        </span>
-        : {res}
+        <span className='hidden md:inline-block font-semibold'>Role</span>:{' '}
+        {res}
       </p>
       <p className='text-xs md:text-sm p-0.5'>
         <i class='fas fa-layer-group md:hidden'></i>
