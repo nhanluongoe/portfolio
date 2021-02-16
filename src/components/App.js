@@ -1,16 +1,16 @@
 import React from 'react';
-import { Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import '../assets/main.css';
 import Header from './Header';
 import Home from './Home';
 import About from './About';
 import Projects from './Projects';
-import history from '../history';
+// import history from '../history';
 
 const App = () => {
   return (
     <div className=''>
-      <Router history={history}>
+      <Router>
         <div className='flex h-screen justify-between'>
           <div className='p-4 w-1/6 bg-gray-700'>
             <Header />
