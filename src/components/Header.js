@@ -7,7 +7,7 @@ const Header = () => {
       <div>
         <ul className='py-5'>
           <li className='p-3 text-gray-200 hover:text-white transform hover:scale-110 transition duration-500 ease-in-out'>
-            <Link to='/portfolio'>
+            <Link to='/'>
               <span className='md:hidden'>
                 <i class='fas fa-house-user'></i>
               </span>
@@ -27,7 +27,7 @@ const Header = () => {
               <span className='md:hidden'>
                 <i class='fas fa-code'></i>
               </span>
-              <span className='hidden md:block'>Project</span>
+              <span className='hidden md:block'>Projects</span>
             </Link>
           </li>
         </ul>

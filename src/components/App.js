@@ -9,14 +9,14 @@ import history from '../history';
 
 const App = () => {
   return (
-    <div className='font-mono'>
+    <div className=''>
       <Router history={history}>
         <div className='flex h-screen justify-between'>
           <div className='p-4 w-1/6 bg-gray-700'>
             <Header />
           </div>
           <div className='py-4 pb-10 w-5/6 px-4'>
-            <Route path='/portfolio' exact component={Home} />
+            <Route path='/' exact component={Home} />
             <Route path='/about' exact component={About} />
             <Route path='/projects' exact component={Projects} />
           </div>

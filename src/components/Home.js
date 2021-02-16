@@ -84,7 +84,7 @@ const Home = () => {
   };
 
   return (
-    <div className='flex flex-col md:w-5/6'>
+    <div className='flex flex-col lg:w-5/6'>
       <Welcome />
       <div className='md:flex justify-around items-center'>
         <Avatar />
