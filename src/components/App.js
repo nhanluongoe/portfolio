@@ -10,7 +10,7 @@ import Projects from './Projects';
 const App = () => {
   return (
     <div className=''>
-      <Router>
+      <Router basename='/portfolio'>
         <div className='flex h-screen justify-between'>
           <div className='p-4 w-1/6 bg-gray-700'>
             <Header />
